@@ -365,7 +365,7 @@ def problem1c(n):
     ###########################################################################
     # IMPORTANT:
     #    **  For full credit you must appropriately
-    #    **  use (call) the   is_prime   and   sum_of_digits
+    #    **  use (call) the  is_prime   and   sum_of_digits
     #    **  functions that are DEFINED ABOVE.
     ###########################################################################
     # -------------------------------------------------------------------------
