@@ -25,7 +25,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the green doc-string for the:
+# DONE: 2.  READ the green doc-string for the:
 #   - is_prime
 #   - sum_of_digits
 # functions defined below.  You do NOT need to understand their
@@ -189,7 +189,7 @@ def problem0a(n):
            since (2 + 4 + 6) is 12, which is NOT odd.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -207,6 +207,10 @@ def problem0a(n):
     #        ASK FOR HELP if you do not understand this hint.
     # -------------------------------------------------------------------------
 
+    if sum_of_digits(n) % 2 == 1:
+        return True
+    else:
+        return False
 
 def run_test_problem0b():
     """ Tests the   problem0b   function. """
@@ -262,7 +266,7 @@ def problem0b(n):
            since there are 46 primes between 2 and 200.
      """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -272,6 +276,14 @@ def problem0b(n):
     ###########################################################################
     # ------------------------------------------------------------------
 
+    total = -1
+    for k in range(n+1):
+        if n > (2):
+            if is_prime(k+1) == True:
+                total = total +1
+        elif n == 2:
+            total = 1
+    return total
 
 def run_test_problem0c():
     """ Tests the   problem0c  function. """
@@ -330,7 +342,7 @@ def problem0c(circle, n, window):
       :type window: rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -339,6 +351,11 @@ def problem0c(circle, n, window):
     ###########################################################################
     # -------------------------------------------------------------------------
 
+    circle.attach_to(window)
+    for k in range (n+1):
+        circle1 = rg.Circle(rg.Point(circle.center.x+2*k*circle.radius , circle.center.y) , circle.radius)
+        circle1.attach_to(window)
+        window.render(.5)
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
