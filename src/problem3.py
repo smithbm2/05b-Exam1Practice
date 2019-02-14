@@ -226,7 +226,7 @@ def problem3b(m, point1):
         :type point1: rg.Point
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -240,11 +240,11 @@ def problem3b(m, point1):
     #    TIME ESTIMATE:   20 to 30 minutes.
     # -------------------------------------------------------------------------
     thickness = 0
+    window = rg.RoseWindow(400, 650)
     for k in range(m):
-        window = rg.RoseWindow(400 , 650)
         thickness1 = problem3a(window , rg.Point(point1.x , point1.y + k*60) , 3 + 2*k)
-        window.close_on_mouse_click()
         thickness = thickness + thickness1
+    window.close_on_mouse_click()
     return thickness
 
 # -----------------------------------------------------------------------------
