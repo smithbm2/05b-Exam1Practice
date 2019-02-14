@@ -373,7 +373,11 @@ def problem1c(n):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 20 minutes.
     # -------------------------------------------------------------------------
-
+    product = 1
+    for k in range(n-1):
+        if is_prime(2+k) == True:
+            product = product*(2+k)
+    return sum_of_digits(product)
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
