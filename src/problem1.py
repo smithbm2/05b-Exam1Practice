@@ -379,6 +379,7 @@ def problem1c(n):
             product = product*(2+k)
     return sum_of_digits(product)
 
+
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
