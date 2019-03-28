@@ -242,8 +242,10 @@ def problem3b(m, point1):
     thickness = 0
     window = rg.RoseWindow(400, 650)
     for k in range(m):
+
         thickness1 = problem3a(window , rg.Point(point1.x , point1.y + k*60) , 3 + 2*k)
         thickness = thickness + thickness1
+    window.render()
     window.close_on_mouse_click()
     return thickness
 
